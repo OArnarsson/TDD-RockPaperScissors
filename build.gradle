@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+archivesBaseName = 'OnRiSnake'
+
+mainClassName = 'snake.Snake'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile files('/slf4j-simple-1.7.21.jar')
+    compile 'com.sparkjava:spark-core:2.5'
+
+
+    testCompile 'junit:junit:4.+'
+}
+
+task stage {
+        doFirst {
+                clean
+        }
+
+    dependsOn installDist
+}
