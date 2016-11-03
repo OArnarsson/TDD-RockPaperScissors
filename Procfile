@@ -1,1 +1,1 @@
-build/install/TDD-Snake/bin/TDD-Snake
+web: build/install/TDD-Snake/bin/TDD-Snake
