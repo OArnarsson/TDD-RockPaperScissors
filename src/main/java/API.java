@@ -1,16 +1,94 @@
-package snake;
+package oarnarsson;
+
+import java.util.Random;
+import org.json.simple.JSONObject;
 
 public class API {
-    private int size = 25;
-    public char[][] cells;
+    int totalWins, totalLosses, totalGames,
+    playerAction, computerAction, gameStatus;
+    JSONObject apiJSON = new JSONObject();
 
-    //Constructs the board, either vs AI or 2 player
+    //Total reset of game
     API() {
-        cells = new char[size][size];
+      totalWins = 0;
+      totalLosses = 0;
+      totalGames = 0;
+      gameStatus = -1;
     }
 
+    //Returns the JSON object the webApp requires
+    public JSONObject getJSON() {
+      apiJSON.put("totalWins", totalWins);
+      apiJSON.put("totalLosses", totalLosses);
+      apiJSON.put("totalGames", totalGames);
+      apiJSON.put("playerAction", playerAction);
+      apiJSON.put("computerAction", computerAction);
+      apiJSON.put("gameStatus", gameStatus);
+      return apiJSON;
+    }
 
-    public static void main(String[] args) {
+    //Sets the game status to netural
+    public void newGame() {
+      gameStatus = -1;
+    }
 
+    //Locks player choice, finishes the game accordingly
+    public void lockAction(int action) {
+      playerAction = action;
+      getComputerAction();
+      gameStatus = getWinner();
+      updateScore();
+    }
+
+    //Picks the computerAction
+    private void getComputerAction() {
+      Random rand = new Random();
+      computerAction = rand.nextInt(3);
+    }
+
+    //For testing purposes
+    public void MockComputerAction(int action) {
+      computerAction = action;
+    }
+
+    //Keeps track of games played and results
+    private  void updateScore() {
+      totalGames += 1;
+
+      if(gameStatus == 1)
+        totalWins += 1;
+      if(gameStatus == 2)
+        totalLosses += 1;
+    }
+
+    //Determines the result of the game
+    public int getWinner() {
+      /*Rock     = 0 = Draw
+      * Paper    = 1 = playerWin
+      * Scissors = 2 = playLose*/
+
+      //Player picked Rock
+      if(playerAction == 0) {
+        if(computerAction == 1)
+          return 2;
+        if(computerAction == 2)
+          return 1;
+      }
+      //Player picked Paper
+      if(playerAction == 1) {
+        if(computerAction == 0)
+          return 1;
+        if(computerAction == 2)
+          return 2;
+      }
+      //Player picked Scissors
+      if(playerAction == 2) {
+        if(computerAction == 0)
+          return 2;
+        if(computerAction == 1)
+          return 1;
+      }
+      //Draw
+      return 0;
     }
 }

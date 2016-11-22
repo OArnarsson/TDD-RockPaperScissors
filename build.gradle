@@ -1,8 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'application'
-archivesBaseName = 'OnRiSnake'
+archivesBaseName = 'OArnarssonRPS'
 
-mainClassName = 'snake.Snake'
+mainClassName = 'oarnarsson.RockPapeScissors'
 
 repositories {
     jcenter()
@@ -11,6 +11,7 @@ repositories {
 dependencies {
     compile files('/slf4j-simple-1.7.21.jar')
     compile 'com.sparkjava:spark-core:2.5'
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
 
 
     testCompile 'junit:junit:4.+'

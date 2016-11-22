@@ -1,16 +1,16 @@
-package snake;
+package oarnarsson;
 
 import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
 
 
-public class Snake implements SparkApplication {
+public class RockPaperScissors implements SparkApplication {
     API api = new API();
 
     public static void main(String[] args) {
         staticFileLocation("/public");
-        SparkApplication snake = new Snake();
+        SparkApplication rps  = new RockPaperScissors();
 
         String port = System.getenv("PORT");
         if (port != null) {
@@ -18,14 +18,11 @@ public class Snake implements SparkApplication {
         }
 
 
-        snake.init();
+        rps.init();
     }
 
     @Override
 	public void init() {
-            post("/resetBoard", (req, res) -> {
-            api = new API();
-            return "123";
         });
     }
 }
