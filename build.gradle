@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 archivesBaseName = 'OArnarssonRPS'
 
-mainClassName = 'oarnarsson.RockPapeScissors'
+mainClassName = 'oarnarsson.RockPaperScissors'
 
 repositories {
     jcenter()

@@ -23,6 +23,9 @@ public class RockPaperScissors implements SparkApplication {
 
     @Override
 	public void init() {
+            post("/newGame", (req, res) -> {
+            api.newGame();
+            return api.getJSON();
         });
     }
 }
