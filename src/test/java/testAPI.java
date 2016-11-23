@@ -48,10 +48,4 @@ public class testAPI
       api.lockAction(0);
       assertEquals(2, api.totalGames);
     }
-
-    @Test //5
-    public void testJSON() {
-      assertEquals('{"totalWins":0,"totalGames":0,"totalLosses":0,"playerAction":0,"gameStatus":-1,"computerAction":0}', api.getJSON());
-    }
-
 }
