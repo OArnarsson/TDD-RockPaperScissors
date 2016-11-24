@@ -1,5 +1,6 @@
 /*Deep Orange - primary color*/
 /*Indigo - accent color*/
+/*Size variables*/
 body {
   width: 100%;
   margin: 0;
@@ -22,16 +23,30 @@ header {
     margin-right: 0; }
 
 .content {
-  padding: 4%;
+  padding: 3.9%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
   .content .gameStage {
-    border-radius: 5px; }
+    text-align: center;
+    padding: 1.75% 0; }
+    .content .gameStage div {
+      font-size: 4rem;
+      padding: 4%; }
+      .content .gameStage div span {
+        padding: 0 2%; }
     .content .gameStage .mainStage {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
       background-color: #FF9E80; }
     .content .gameStage .actionOptions {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
       background-color: #FF6E40; }
+      .content .gameStage .actionOptions span {
+        border-radius: 10px; }
+        .content .gameStage .actionOptions span:hover {
+          background-color: #FF9E80; }
 
 .secText {
   opacity: 0.7; }
@@ -48,5 +63,55 @@ footer {
 
 footer > * {
   align-self: center; }
+
+@media screen and (max-width: 799px) {
+  .hiddenInMobile, #forkongithub a::before, #forkongithub a::after {
+    display: none; } }
+@media screen and (min-width: 800px) {
+  #forkongithub {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 9999; }
+    #forkongithub a {
+      background: #283593;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px 40px;
+      line-height: 2rem;
+      transition: 0.5s;
+      width: 120px;
+      position: absolute;
+      top: 30px;
+      right: -50px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+      font-size: 0.8rem;
+      overflow: hidden; }
+      #forkongithub a:hover {
+        background: #3F51B5;
+        color: #fff; }
+      #forkongithub a::before, #forkongithub a::after {
+        content: "";
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 1px;
+        background: #fff; }
+      #forkongithub a::after {
+        bottom: 1px;
+        top: auto; } }
 
 /*# sourceMappingURL=rps.css.map */
