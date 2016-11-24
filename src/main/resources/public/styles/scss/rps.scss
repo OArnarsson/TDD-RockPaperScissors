@@ -1,0 +1,88 @@
+/*Deep Orange - primary color*/
+$p500:  #FF5722;
+$p50:   #FBE9E7;
+$p100:  #FFCCBC;
+$p200:  #FFAB91;
+$p300:  #FF8A65;
+$p400:  #FF7043;
+$p500:  #FF5722;
+$p600:  #F4511E;
+$p700:  #E64A19;
+$p800:  #D84315;
+$p900:  #BF360C;
+$pa100: #FF9E80;
+$pa200: #FF6E40;
+$pa400: #FF3D00;
+$pa700: #DD2C00;
+
+/*Indigo - accent color*/
+$a500:  #3F51B5;
+$a50:   #E8EAF6;
+$a100:  #C5CAE9;
+$a200:  #9FA8DA;
+$a300:  #7986CB;
+$a400:  #5C6BC0;
+$a500:  #3F51B5;
+$a600:  #3949AB;
+$a700:  #303F9F;
+$a800:  #283593;
+$a900:  #1A237E;
+$aa100: #8C9EFF;
+$aa200: #536DFE;
+$aa400: #3D5AFE;
+$aa700: #304FFE;
+
+body{
+	width:100%;
+	margin:0;
+	background-color: $p500;
+	color: #FEFEFE
+}
+
+a {
+	color: #3F51B5
+}
+
+header {
+	width: 100%;
+	height: auto;
+	background-color: $p800;
+	display: flex;
+	flex-direction: row;
+	font-weight: bolder;
+}
+
+header h1 {
+	flex-direction: column;
+	padding-left: 4%;
+	padding-right: 4%;
+	align-self: center;
+}
+
+.gameHeader{
+	border-top:2px solid #FFF;
+	border-bottom:2px solid #FFF;
+	text-align: center;
+}
+
+.content{
+	padding:4%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $p800;
+	width: 100%;
+	min-height: 55px;
+	padding-top:2%;
+	padding-bottom: 2%;
+}
+
+footer >*{
+	align-self: center;
+}

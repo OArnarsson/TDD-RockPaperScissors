@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./styles/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="./rps.css">
     </head>
     <body>
 
@@ -16,18 +16,20 @@
     <!--Header-->
 
     <!--Content-->
-    <div class="Content">
-      <div class="gameHeader">
+    <div class="content">
+        <div class="gameHeader">
     		<h1>RockPaperScissors</h1>
-    	</div>
+        </div>
 
       <span class="newGame">New Game</span>
 
       <div class="gameStage">
-    		<div class="mainStage"
+    		<div class="mainStage">
+          <span id="playerAction"></span><span id="vs"></span><span id="computerAction"></span>
         </div>
 
-        <div class="playerActions">
+        <div class="actionOptions">
+          <span id="Rock">✊</span><span id="Paper">✋</span><span id="Scissors">✌️</span>
         </div>
     	</div>
     </div>
@@ -35,15 +37,14 @@
 
     <!--Footer-->
     <footer>
-        <ul>
-            <li>© 2016, Orri Arnarsson</li>
-            <li><a href="https://github.com/OArnarsson"><i class="fa fa-github" aria-hidden="true"></i> Github </a> | <a href="http://arnarsson.is/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Arnarsson.is</a> | <a target="_blank" href="https://is.linkedin.com/in/orriarnarsson">LinkedIn <i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-        </ul>
+        <div>© 2016, Orri Arnarsson</div>
+        <div><a href="https://github.com/OArnarsson"><i class="fa fa-github" aria-hidden="true"></i> Github </a> | <a href="http://arnarsson.is/"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Arnarsson.is</a> | <a target="_blank" href="https://is.linkedin.com/in/orriarnarsson">LinkedIn <i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
     </footer>
     <!--./Footer-->
 
 
 
      <script src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="  sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+     <script src="./rps.js"></script>
     </body>
 </html>

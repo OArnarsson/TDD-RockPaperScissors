@@ -1,0 +1,50 @@
+/*Deep Orange - primary color*/
+/*Indigo - accent color*/
+body {
+  width: 100%;
+  margin: 0;
+  background-color: #FF5722;
+  color: #FEFEFE; }
+
+a {
+  color: #3F51B5; }
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: #D84315;
+  display: flex;
+  flex-direction: row;
+  font-weight: bolder; }
+
+header h1 {
+  flex-direction: column;
+  padding-left: 4%;
+  padding-right: 4%;
+  align-self: center; }
+
+.gameHeader {
+  border-top: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  text-align: center; }
+
+.content {
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D84315;
+  width: 100%;
+  min-height: 55px;
+  padding-top: 2%;
+  padding-bottom: 2%; }
+
+footer > * {
+  align-self: center; }
+
+/*# sourceMappingURL=rps.css.map */

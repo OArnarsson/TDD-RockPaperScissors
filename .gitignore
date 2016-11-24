@@ -1,7 +1,7 @@
 .gradle
 build/
-src/main/resources/node_modules
-src/main/resources/.sass-cache
+node_modules/
+.sass-cache/
 
 # Ignore Gradle GUI config
 gradle-app.setting
