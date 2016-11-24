@@ -1,0 +1,1 @@
+web: build/install/TDD-RockPaperScissors/bin/TDD-RockPaperScissors
