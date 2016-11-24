@@ -1,5 +1,4 @@
 /*Deep Orange - primary color*/
-$p500:  #FF5722;
 $p50:   #FBE9E7;
 $p100:  #FFCCBC;
 $p200:  #FFAB91;
@@ -16,7 +15,6 @@ $pa400: #FF3D00;
 $pa700: #DD2C00;
 
 /*Indigo - accent color*/
-$a500:  #3F51B5;
 $a50:   #E8EAF6;
 $a100:  #C5CAE9;
 $a200:  #9FA8DA;
@@ -35,34 +33,27 @@ $aa700: #304FFE;
 body{
 	width:100%;
 	margin:0;
+	font-size: 1.1rem;
 	background-color: $p500;
-	color: #FEFEFE
+	color: #FFF;
+	font-family: 'Cairo', sans-serif;
 }
 
 a {
-	color: #3F51B5
+	color: $a900;
 }
 
 header {
-	width: 100%;
-	height: auto;
+	padding-left: 4%;
 	background-color: $p800;
 	display: flex;
 	flex-direction: row;
 	font-weight: bolder;
-}
 
-header h1 {
-	flex-direction: column;
-	padding-left: 4%;
-	padding-right: 4%;
-	align-self: center;
-}
-
-.gameHeader{
-	border-top:2px solid #FFF;
-	border-bottom:2px solid #FFF;
-	text-align: center;
+	h2 {
+		margin: 0.6%;
+		margin-right: 0;
+	}
 }
 
 .content{
@@ -70,6 +61,23 @@ header h1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+
+	.gameStage {
+		border-radius: 5px;
+
+
+		.mainStage {
+			background-color: $pa100;
+		}
+
+		.actionOptions {
+			background-color: $pa200;
+		}
+	}
+}
+
+.secText {
+	opacity: 0.7;
 }
 
 footer{

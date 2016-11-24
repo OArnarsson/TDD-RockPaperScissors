@@ -3,36 +3,38 @@
 body {
   width: 100%;
   margin: 0;
+  font-size: 1.1rem;
   background-color: #FF5722;
-  color: #FEFEFE; }
+  color: #FFF;
+  font-family: 'Cairo', sans-serif; }
 
 a {
-  color: #3F51B5; }
+  color: #1A237E; }
 
 header {
-  width: 100%;
-  height: auto;
+  padding-left: 4%;
   background-color: #D84315;
   display: flex;
   flex-direction: row;
   font-weight: bolder; }
-
-header h1 {
-  flex-direction: column;
-  padding-left: 4%;
-  padding-right: 4%;
-  align-self: center; }
-
-.gameHeader {
-  border-top: 2px solid #FFF;
-  border-bottom: 2px solid #FFF;
-  text-align: center; }
+  header h2 {
+    margin: 0.6%;
+    margin-right: 0; }
 
 .content {
   padding: 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
+  .content .gameStage {
+    border-radius: 5px; }
+    .content .gameStage .mainStage {
+      background-color: #FF9E80; }
+    .content .gameStage .actionOptions {
+      background-color: #FF6E40; }
+
+.secText {
+  opacity: 0.7; }
 
 footer {
   display: flex;
