@@ -1,37 +1,5 @@
-/*Deep Orange - primary color*/
-$p50:   #FBE9E7;
-$p100:  #FFCCBC;
-$p200:  #FFAB91;
-$p300:  #FF8A65;
-$p400:  #FF7043;
-$p500:  #FF5722;
-$p600:  #F4511E;
-$p700:  #E64A19;
-$p800:  #D84315;
-$p900:  #BF360C;
-$pa100: #FF9E80;
-$pa200: #FF6E40;
-$pa400: #FF3D00;
-$pa700: #DD2C00;
-
-/*Indigo - accent color*/
-$a50:   #E8EAF6;
-$a100:  #C5CAE9;
-$a200:  #9FA8DA;
-$a300:  #7986CB;
-$a400:  #5C6BC0;
-$a500:  #3F51B5;
-$a600:  #3949AB;
-$a700:  #303F9F;
-$a800:  #283593;
-$a900:  #1A237E;
-$aa100: #8C9EFF;
-$aa200: #536DFE;
-$aa400: #3D5AFE;
-$aa700: #304FFE;
-
-/*Size variables*/
-$borderRad: 10px;
+@import 'emoji.scss';
+@import 'variables.scss';
 
 body{
 	width:100%;
@@ -43,7 +11,8 @@ body{
 }
 
 a {
-	color: $a900;
+	color: $a700;
+	text-decoration: none;
 }
 
 header {
@@ -81,19 +50,19 @@ header {
 		.mainStage {
 			border-top-left-radius: $borderRad;
 			border-top-right-radius: $borderRad;
-			background-color: $pa100;
+			background-color: $p800;
 		}
 
 		.actionOptions {
 			border-bottom-left-radius: $borderRad;
 			border-bottom-right-radius: $borderRad;
-			background-color: $pa200;
+			background-color: $p900;
 
 			span {
 				border-radius: $borderRad;
 
 				&:hover {
-					background-color: $pa100;
+					background-color: $p800;
 				}
 			}
 		}
@@ -113,6 +82,10 @@ footer{
 	min-height: 55px;
 	padding-top:2%;
 	padding-bottom: 2%;
+
+	span {
+		opacity: 0.5;
+	}
 }
 
 footer >*{
@@ -129,55 +102,57 @@ footer >*{
 //Github fork banner
 @media screen and (min-width:800px){
 	#forkongithub {
-		position:absolute;
-		display:block;
-		top:0;
-		right:0;
-		width:200px;
-		overflow:hidden;
-		height:200px;
-		z-index:9999;
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		width: 200px;
+		overflow: hidden;
+		height: 200px;
+		z-index: 9999;
 
 		a {
-			background:#283593;
-			color:#fff;
-			text-decoration:none;
-			text-align:center;
+			background: $a900;
+			color: #fff;
+			text-decoration: none;
+			text-align: center;
 			font-weight:bold;
-			padding:5px 40px;
-			line-height:2rem;
-			transition:0.5s;
-			width:120px;
-			position:absolute;
-			top:30px;
-			right:-50px;
-			transform:rotate(45deg);
-			-webkit-transform:rotate(45deg);
-			-ms-transform:rotate(45deg);
-			-moz-transform:rotate(45deg);
-			-o-transform:rotate(45deg);
-			box-shadow:4px 4px 10px rgba(0,0,0,0.8);
-			font-size:0.8rem;
-			overflow:hidden;
+			padding: 5px 40px;
+			line-height: 2rem;
+			transition: 0.5s;
+			width: 120px;
+			position: absolute;
+			top: 30px;
+			right: -50px;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+			font-size: 0.8rem;
+			overflow: hidden;
 
 			&:hover
-			{background:#3F51B5;
-				color:#fff;
+			{
+				background: $a600;
+				color: #fff;
 			}
 
 			&::before, &::after {
-				content:"";
-				width:100%;
-				display:block;
-				position:absolute;
-				top:1px;
-				left:0;
-				height:1px;
-				background:#fff;
+				content: "";
+				width: 100%;
+				display: block;
+				position: absolute;
+				top: 1px;
+				left: 0;
+				height: 1px;
+				background: #fff;
 			}
 
 			&::after {
-				bottom:1px;top:auto;
+				bottom: 1px;
+				top: auto;
 			}
 		}
 	}
