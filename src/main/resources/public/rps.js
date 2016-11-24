@@ -1,46 +1,58 @@
-$(function() {
-	var gameOver = false;
-	console.log("The game is: " + gameOver);
-	   
-});
+var gameOver = false;
+var i = 0;
+var symbol = $('#computerAction');
+var compActions = ['<i class="twa twa-punch"></i>', '<i class="twa twa-hand"></i>', '<i class="twa twa-v"></i>'];
+var total = compActions.length;
+
+//This is only for testing
+randomComputer();
+
+function randomComputer() {
+	//Stops the roll when player has chosen
+    if(this.gameOver) {
+        symbol.html(this.compActions[0]);
+    	return;
+	}
+
+	//Keeps the endless loop inside the array
+    if(this.i === this.total){
+        this.i = 0;
+    }
+
+	//Find the emoji in array, assigns to the span
+    var currAction = this.compActions[i++];
+    symbol.html(currAction);
+    //Calls itself again to keep rolling
+    setTimeout(randomComputer, Math.random() * 130 + 42);
+}
 
 
 $('.newGame').click(function(){
 	gameOver = false;
-	ResetGame(this);
+    doTheRandom();
 });
+
 
 function isGameOver(param){
 	var message;
-	var isOver;
 
 	switch (param) {
 	    case "0":
 	        message = null;
-	        isOver = false;
 	        break;
 	    case "1":
 	        message = "You win!";
-	        isOver = true;
+	        this.gameOver = true;
 	        break;
 	    case "2":
 	        message = "You've been outsmarted!";
-	        isOver = true;
+            this.gameOver = true;
 	        break;
 	    case "3":
 	    	message = "It's a Draw!";
-	    	isOver = true;
+            this.gameOver = true;
 	    	break;
 	}
-
-	if(isOver){
-		document.getElementById('GState').innerHTML = message;
-		$('.GameBoard').css( "opacity", "0.5");
-		$('.newGame').css( "display", "block");		
-
-	}
-
-	return isOver;
 }
 
 
