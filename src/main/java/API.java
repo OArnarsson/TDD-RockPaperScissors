@@ -6,15 +6,18 @@ import org.json.simple.JSONObject;
 public class API {
     int totalWins, totalLosses, totalGames, totalDraws,
     playerAction, computerAction, gameStatus;
-    JSONObject apiJSON = new JSONObject();
+    JSONObject apiJSON;
 
     //Total reset of game
     API() {
-      totalWins = 0;
-      totalLosses = 0;
-      totalDraws = 0;
-      totalGames = 0;
-      gameStatus = -1;
+      apiJSON = new JSONObject();
+      totalWins = new Integer(0);
+      totalLosses = new Integer(0);
+      totalDraws = new Integer(0);
+      totalGames = new Integer(0);
+      playerAction = new Integer(0);
+      computerAction = new Integer(0);
+      gameStatus = new Integer(-1);
     }
 
     //Returns the JSON object the webApp requires
