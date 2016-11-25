@@ -10,7 +10,9 @@ Player action vs Computer action is compared and corresponding result is display
 ### Development manual
 You can download the game from [**this repository**](https://github.com/OArnarsson/TDD-RockPaperScissors) or fork it to you own, after downloading, unzip the game to a folder of your choosing. 
 In order to run the application it´s required to have **Java jdk 1.8** or greater. If you do not have **java 1.8** or greater installed you will need to download and install it to you computer. Java can be downloaded from the [**Oracle website**](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). 
-The game comes packed with a Gradle wrapper(gradlew 3.1) to set up the game follow the administration direction here below.
+The game comes packed with a Gradle wrapper(gradlew 3.1) to set up the game follow the administration direction here below.  
+When making visual changes, you can navigate to [<code>'/src/main/resources/public'</code>](https://github.com/OArnarsson/TDD-RockPaperScissors/tree/master/src/main/resources/public) and run the <code>grunt</code> command.  
+Grunt is configured to compile the .scss files into the .css file linked in the html. Grunt also runs 'browserSync' to help you see what you're doing.
 <br><br>
 
 ### Useful gradle commands
