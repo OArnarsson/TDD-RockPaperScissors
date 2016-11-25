@@ -1,33 +1,33 @@
-var gameOver = true;
+var randComp;
 var i = 0;
-var symbol = $('#computerAction');
 var allActions = ['<i class="twa twa-punch"></i>', '<i class="twa twa-hand"></i>', '<i class="twa twa-v"></i>'];
 var total = allActions.length;
+var compActionHTML = document.getElementById('ComputerAction');
+var playerActionHTML = document.getElementById('PlayerAction');
 
 function updateScore(data) {
     var jason = JSON.parse(data);
-    if(jason.gameState == -1) {
-        this.gameOver = false;
-    }
-    console.log("game over is: " + this.gameOver);
     document.getElementById('PlayerWins').innerHTML = jason.totalWins;
     document.getElementById('TotalDraws').innerHTML = jason.totalDraws;
     document.getElementById('ComputerWins').innerHTML = jason.totalLosses;
-    document.getElementById('PlayerAction').innerHTML = allActions[jason.playerAction];
-    document.getElementById('ComputerAction').innerHTML = allActions[jason.computerAction];
+}
+
+function updateActions(data) {
+    var jason = JSON.parse(data);
+    playerActionHTML.innerHTML = allActions[jason.playerAction];
+    compActionHTML.innerHTML = allActions[jason.computerAction];
 }
 
 $('.pAction').click(function(){
     ServiceCalls("/action",this.id);
 });
 
-function ServiceCalls(ServiceURL){
+function ServiceCall(ServiceURL){
 	$.ajax({
          type: "PUT",
          data: null,
          url: ServiceURL,
          success: function (data) {
-             console.log("Line 30");
              updateScore(data);
              randomComputer();
          },
@@ -45,7 +45,9 @@ function ServiceCalls(ServiceURL, param){
          success: function (data) {
              console.log(data);
              updateScore(data);
-             setTimeout(randomComputer() ,2000);
+             stopRandom();
+             updateActions(data);
+             setTimeout(randomComputer ,2000);
          },
          error: function () {
              console.log("No bueno.");
@@ -55,26 +57,26 @@ function ServiceCalls(ServiceURL, param){
 
 function randomComputer() {
     //Stops the roll when player has chosen
-    if(this.gameOver) {
-        console.log("i tried");
-        return;
+    playerActionHTML.innerHTML = '<i class="twa twa-boy"></i>';
+    randComp = window.setInterval(changeComputer, 65);
+}
+
+function changeComputer() {
+    console.log("changed");
+    if (i === total) {
+        i = 0;
     }
-    //Keeps the endless loop inside the array
-    else {
-        if (this.i === this.total) {
-            this.i = 0;
-        }
-        //Find the emoji in array, assigns to the span
-        var currAction = this.allActions[i++];
-        document.getElementById('ComputerAction').innerHTML = currAction;
-        //Calls itself again to keep rolling
-        setTimeout(randomComputer(), Math.random() * 130 + 42);
-    }
+    //Find the emoji in array, assigns to the span
+    compActionHTML.innerHTML = allActions[i++];
+}
+
+function stopRandom() {
+    window.clearTimeout(randComp);
 }
 
 $('.newGame').click(function(){
     //Removes the 'NewGameButton' and unhides the score banner.
     document.getElementById('NewGameButton').className = "dispNone";
     document.getElementById('Score').className = "scoreCounters";
-    ServiceCalls("/newGame");
+    ServiceCall("/newGame");
 });
