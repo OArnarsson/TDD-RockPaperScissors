@@ -1,6 +1,10 @@
 @import 'emoji.scss';
 @import 'variables.scss';
 
+html {
+	height: 100vh;
+}
+
 body{
 	width:100%;
 	margin:0;
@@ -29,28 +33,44 @@ header {
 }
 
 .content{
-	padding:3.9%;
+	height: 100%;
+	padding:4.5%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 
 	.gameStage {
+		height: 100%;
 		text-align: center;
-		padding: 1.75% 0;
+		border-top-left-radius: $borderRad;
+		border-top-right-radius: $borderRad;
+		background-color: $p800;
 
 		div {
+			height: 50%;
 			font-size: 4rem;
 			padding: 4%;
 
 			span {
-				padding: 0 2%;
+				padding: 0 3.5%;
 			}
 		}
 
+		.newGame {
+			position: fixed;
+			text-align: center;
+			top: 42.5%;
+			left: 35%;
+			width: 30%;
+			height: 10%;
+			border-radius: $borderRad;
+			background-color: $a500;
+			font-size: 1.25rem;
+            line-height: 3.5;
+		}
+
 		.mainStage {
-			border-top-left-radius: $borderRad;
-			border-top-right-radius: $borderRad;
-			background-color: $p800;
+			padding-top: 1%;
 		}
 
 		.actionOptions {
@@ -66,11 +86,28 @@ header {
 				}
 			}
 		}
+
+		.scoreCounters {
+			width: 96%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 0 2%;
+			font-size: 1.55rem;
+		}
 	}
 }
 
 .secText {
 	opacity: 0.7;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.dispNone {
+	display: none;
 }
 
 footer{
