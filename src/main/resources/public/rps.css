@@ -2527,6 +2527,9 @@
 /*Blue Grey - primary color*/
 /*Cyan - accent color*/
 /*Size variables*/
+html {
+  height: 100vh; }
+
 body {
   width: 100%;
   margin: 0;
@@ -2550,22 +2553,36 @@ header {
     margin-right: 0; }
 
 .content {
-  padding: 3.9%;
+  height: 100%;
+  padding: 4.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
   .content .gameStage {
+    height: 100%;
     text-align: center;
-    padding: 1.75% 0; }
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #455A64; }
     .content .gameStage div {
+      height: 50%;
       font-size: 4rem;
       padding: 4%; }
       .content .gameStage div span {
-        padding: 0 2%; }
+        padding: 0 3.5%; }
+    .content .gameStage .newGame {
+      position: fixed;
+      text-align: center;
+      top: 42.5%;
+      left: 35%;
+      width: 30%;
+      height: 10%;
+      border-radius: 10px;
+      background-color: #26C6DA;
+      font-size: 1.25rem;
+      line-height: 3.5; }
     .content .gameStage .mainStage {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      background-color: #455A64; }
+      padding-top: 1%; }
     .content .gameStage .actionOptions {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -2574,9 +2591,22 @@ header {
         border-radius: 10px; }
         .content .gameStage .actionOptions span:hover {
           background-color: #455A64; }
+    .content .gameStage .scoreCounters {
+      width: 96%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 2%;
+      font-size: 1.55rem; }
 
 .secText {
   opacity: 0.7; }
+
+.hidden {
+  visibility: hidden; }
+
+.dispNone {
+  display: none; }
 
 footer {
   display: flex;

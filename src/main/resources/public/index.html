@@ -19,14 +19,21 @@
     <!--Content-->
     <div class="content">
       <div class="gameStage">
-          <!-- <span class="newGame">New Game</span> -->
+          <p id="Score" class="scoreCounters hidden">
+              <span class="pWins">Wins: <span id="PlayerWins"> </span></span>
+              <span class="tGames">Draws: <span id="TotalDraws"> </span></span>
+              <span class="cWins">Losses: <span id="ComputerWins"> </span></span>
+
+          </p>
+
+          <span id="NewGameButton" class="newGame">New Game</span>
 
     		<div class="mainStage">
-          <span id="playerAction"><i class="twa twa-boy"></i></span><span id="vs">vs.</span><span id="computerAction"><i class="twa twa-computer"></i></span>
+          <span id="PlayerAction"><i class="twa twa-boy"></i></span><span id="Vs">vs.</span><span id="ComputerAction"><i class="twa twa-computer"></i></span>
         </div>
 
         <div class="actionOptions">
-          <span id="Rock"><i class="twa twa-punch"></i></span><span id="Paper"><i class="twa twa-hand"></i></span><span id="Scissors"><i class="twa twa-v"></i></span>
+          <span class="pAction" id="0"><i class="twa twa-punch"></i></span><span class="pAction" id="1"><i class="twa twa-hand"></i></span><span class="pAction" id="2"><i class="twa twa-v"></i></span>
         </div>
       </div>
     </div>
