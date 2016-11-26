@@ -91,7 +91,7 @@ function ServiceCalls(ServiceURL, param){
              stopRandom();
              updateScore(data);
              updateActions(data);
-             setTimeout(resetGame, 2000);
+             setTimeout(resetGame, 1000);
          },
          error: function () {
              console.log("No bueno.");
