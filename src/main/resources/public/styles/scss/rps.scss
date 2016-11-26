@@ -45,6 +45,7 @@ header {
 		border-top-left-radius: $borderRad;
 		border-top-right-radius: $borderRad;
 		background-color: $p800;
+		border-radius: $borderRad;
 
 		div {
 			height: 50%;
@@ -53,6 +54,7 @@ header {
 
 			span {
 				padding: 0 3.5%;
+				border-radius: $borderRad;
 			}
 		}
 
@@ -109,6 +111,16 @@ header {
 .dispNone {
 	display: none;
 }
+
+
+/*GAME OVER COLORS*/
+.winner { background-color: $winColor; }
+.draw { background-color: $drawColor; }
+.loser { background-color: $loseColor; }
+.winText { color: $winColor; }
+.drawText { color: $drawColor; }
+.loseText { color: $loseColor; }
+/*./GAME OVER COLORS*/
 
 footer{
 	display: flex;

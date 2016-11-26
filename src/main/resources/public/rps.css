@@ -2524,9 +2524,12 @@
 .twa-zero {
   background-image: url("https://twemoji.maxcdn.com/svg/30-20e3.svg"); }
 
+/*COLORS*/
 /*Blue Grey - primary color*/
 /*Cyan - accent color*/
-/*Size variables*/
+/*./COLORS*/
+/*SIZES*/
+/*./SIZES*/
 html {
   height: 100vh; }
 
@@ -2563,13 +2566,15 @@ header {
     text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: #455A64; }
+    background-color: #455A64;
+    border-radius: 10px; }
     .content .gameStage div {
       height: 50%;
       font-size: 4rem;
       padding: 4%; }
       .content .gameStage div span {
-        padding: 0 3.5%; }
+        padding: 0 3.5%;
+        border-radius: 10px; }
     .content .gameStage .newGame {
       position: fixed;
       text-align: center;
@@ -2608,6 +2613,26 @@ header {
 .dispNone {
   display: none; }
 
+/*GAME OVER COLORS*/
+.winner {
+  background-color: rgba(170, 255, 150, 0.55); }
+
+.draw {
+  background-color: #00838f; }
+
+.loser {
+  background-color: rgba(255, 120, 150, 0.6); }
+
+.winText {
+  color: rgba(170, 255, 150, 0.55); }
+
+.drawText {
+  color: #00838f; }
+
+.loseText {
+  color: rgba(255, 120, 150, 0.6); }
+
+/*./GAME OVER COLORS*/
 footer {
   display: flex;
   flex-direction: column;
