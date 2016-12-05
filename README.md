@@ -4,7 +4,10 @@ This small RockPaperScissors game was made to get some practice on both front-en
 The game is constructed like so:
 The computer is rolling between all possible actions.  
 When the player locks in his action, the computer slows down the roll, eventually locking in an action.
-Player action vs Computer action is compared and corresponding result is displayed.
+Player action vs Computer action is compared and corresponding result is displayed.  
+  
+Heroku runs on the java spark application, therefore there can be some "lag" between user clicks and the response from the backend.  
+I intend to make another RockPaperScissors game using JavaScript only to see the performance difference.
 <br><br>
 
 ### Development manual
